@@ -4,13 +4,19 @@
   "private": true,
   "dependencies": {
     "react": "^16.4.0",
-    "react-dom": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "devDependencies": {
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "proxyquire": "^2.0.1",
+    "rewire": "^4.0.1",
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "start": "node scripts/customize start",
+    "build": "node scripts/customize build",
+    "test": "node scripts/customize test --env=jsdom",
     "eject": "react-scripts eject"
   }
 }
