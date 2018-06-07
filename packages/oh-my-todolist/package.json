@@ -1,6 +1,6 @@
 {
   "name": "oh-my-todolist",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
     "react": "^16.4.0",
@@ -10,8 +10,8 @@
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "proxyquire": "^2.0.1",
-    "rewire": "^4.0.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "rewire": "^4.0.1"
   },
   "scripts": {
     "start": "node scripts/customize start",
