@@ -1,4 +1,10 @@
 const path = require('path');
+const fs = require('fs');
+
+// Make sure any symlinks in the project folder are resolved:
+// https://github.com/facebookincubator/create-react-app/issues/637
+const appDirectory = fs.realpathSync(process.cwd());
+const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 
 module.exports = function(config) {
   // Use your own ESLint file
@@ -12,4 +18,9 @@ module.exports = function(config) {
     test: /\.less$/,
     use: ["style-loader", "css-loader", "less-loader"]
   });
+
+  // Add alias for readable import
+  let alias = config.resolve.alias;
+  alias.components = resolveApp('src/components');
+  alias.pages = resolveApp('src/pages');
 }
