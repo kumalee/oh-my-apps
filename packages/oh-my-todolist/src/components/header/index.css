@@ -1,0 +1,223 @@
+.topbar {
+    height: 43px;
+    top: 0;
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    border-bottom: solid 1px #ca2100;
+    background-color: #db4c3f;
+    transition: height 200ms ease-in;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.icons {
+    background: url(https://d3ptyyxy2at9ui.cloudfront.net/c72359729b11e0d9edb7517d477ed05c.png) 0 0 no-repeat;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), not all, not all, only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .icons {
+        background: url(https://d3ptyyxy2at9ui.cloudfront.net/a1d7a51ec4a3dc5aa8e64d8f6e8b3331.png) 0 0 no-repeat;
+    }
+}
+
+.topBarInner {
+    max-width: 950px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.leftMenuToggle {
+    padding: 5px 0;
+    padding-right: 5px;
+    display: none;
+}
+
+.iconLightMenuToggle {
+    composes: icons;
+    background-size: 197px,3538px;
+    background-position: 0 -711px;
+    width: 20px;
+    height: 15px;
+}
+
+.logo {
+    margin-left: 0;
+    position: absolute;
+    left: 0;
+    top: 9px;
+}
+
+.iconLightLogo {
+    composes: icons;
+    background-size: 197px,3538px;
+    background-position: 0 -2544px;
+    width: 25px;
+    height: 25px;
+}
+
+.topIcons {
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    white-space: nowrap !important;
+}
+
+.topIconSpan {
+    display: inline-block;
+    box-sizing: border-box;
+    float: left;
+    height: 100%;
+    padding: 12px 10px 0 10px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.topIconImg {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.iconNeedsSyncYellow {
+    composes: icons;
+    composes: topIconImg;
+    background-size: 197px,3538px;
+    background-position: 0 -1538px;
+    width: 18px;
+    height: 16px;
+}
+
+.quickAddAndTaskHolder {
+    composes: topIconSpan;
+    position: relative;
+    top: 1px;
+}
+
+.iconLightAddTask {
+    composes: icons;
+    composes: topIconImg;
+    background-size: 197px,3538px;
+    background-position: 0 -1142px;
+    width: 16px;
+    height: 16px;
+}
+
+.completedHolder {
+    composes: topIconSpan;
+    position: relative;
+    top: -1px;
+}
+
+.completedHolderLink {
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.completed {
+    display: flex;
+    align-items: center;
+    min-width: 15px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.completedCount {
+    text-decoration: none;
+    white-space: nowrap;
+    margin-left: 5px;
+    line-height: 1;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.notificationCount {
+    composes: topIconSpan;
+    position: relative;
+    top: 2px;
+}
+
+.iconLightNotification {
+    composes: icons;
+    background-size: 197px,3538px;
+    background-position: 0 -1034px;
+    width: 16px;
+    height: 16px;
+}
+
+.gearHolder {
+    composes: topIconSpan;
+    position: relative;
+    top: 2px;
+}
+
+.iconGearHolder {
+    composes: icons;
+    background-size: 197px,3538px;
+    background-position: 0 -1160px;
+    width: 16px;
+    height: 16px;
+}
+
+.search {
+    white-space: nowrap;
+    margin-left: 317px;
+    padding-top: 5px;
+}
+
+.iconLightSearch {
+    composes: icons;
+    background-size: 197px,3538px;
+    background-position: 0 -1412px;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    z-index: 15;
+    margin-top: 9px;
+    margin-left: 8px;
+    cursor: text !important;
+    opacity: 1;
+    transition: opacity .1s ease-in;
+}
+
+.iconDarkSearch {
+    background-size: 197px,3538px;
+    background-position: 0 -1070px;
+}
+
+.inputSearch {
+    user-select: text;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 5px;
+    width: 300px;
+    box-sizing: border-box;
+    outline: 0;
+    color: #fff;
+    padding-left: 30px;
+    margin-top: 2px;
+    background: 0;
+    transition: all .2s ease-in;
+}
+
+.inputSearchFocused {
+    z-index: 10;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #eee;
+    width: 100%;
+}
+
+@media only screen and (max-width: 870px) {
+    .inputSearch {
+        width: 160px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .inputSearch {
+        width: 99%;
+    }
+}

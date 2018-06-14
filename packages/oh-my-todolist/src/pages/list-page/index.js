@@ -24,6 +24,7 @@ export default class Page extends React.Component {
     render() {
         return (
             <React.Fragment>
+
                 <Form onAddTodo={this.onAddTodo} />
                 <List todolist={this.state.todolist} />
             </React.Fragment>
