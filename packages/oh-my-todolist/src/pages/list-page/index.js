@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from 'components/form';
-import List from 'components/list';
+import Sidebar from 'components/sidebar';
+import Styles from './index.css';
 
 export default class Page extends React.Component {
     constructor(props){
@@ -23,11 +24,10 @@ export default class Page extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
-
+            <div className={Styles.appContent}>
                 <Form onAddTodo={this.onAddTodo} />
-                <List todolist={this.state.todolist} />
-            </React.Fragment>
+                <Sidebar todolist={this.state.todolist} />
+            </div>
         )
     }
 };

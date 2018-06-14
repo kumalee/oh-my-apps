@@ -21,7 +21,7 @@
 }
 
 .topBarInner {
-    max-width: 950px;
+    composes: maxWidth from 'styles/variables.css';
     height: 100%;
     margin: 0 auto;
     position: relative;

@@ -57,4 +57,5 @@ module.exports = function(config) {
   let alias = config.resolve.alias;
   alias.components = resolveApp('src/components');
   alias.pages = resolveApp('src/pages');
+  alias.styles = resolveApp('src/styles');
 }
