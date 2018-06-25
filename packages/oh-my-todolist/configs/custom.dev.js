@@ -8,6 +8,15 @@ const appDirectory = fs.realpathSync(process.cwd());
 const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 
 module.exports = function(config) {
+  // Add stylelint to jsx
+  let lintStyle = config.module.rules[0].use;
+  lintStyle.push({
+    loader: require.resolve('stylelint-custom-processor-loader'),
+    options: {
+      configPath: './configs/stylelintrc.json',
+    },
+  });
+
   // Add the LESS loader second-to-last
   // (last one must remain as the "file-loader")
   let loaderList = config.module.rules[1].oneOf;
@@ -16,7 +25,7 @@ module.exports = function(config) {
     options: {
       importLoaders: 1,
       modules: true,
-      localIdentName: '[name]__[local]-[hash:base64:5]'
+      localIdentName: '[name]__[local]-[hash:base64:5]',
     },
   };
   loaderList.splice(loaderList.length - 1, 0, {
@@ -49,7 +58,7 @@ module.exports = function(config) {
           ],
         },
       },
-      require.resolve('less-loader')
+      require.resolve('less-loader'),
     ],
   },);
 

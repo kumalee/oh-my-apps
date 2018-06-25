@@ -1,0 +1,13 @@
+{
+  "processors": ["stylelint-processor-styled-components"],
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-styled-components"
+  ],
+  "defaultSeverity": "error",
+  "rules": { 
+    "indentation": [4, {
+      "except": ["value"]
+    }]
+  }
+}

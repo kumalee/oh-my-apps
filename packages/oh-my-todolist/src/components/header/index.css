@@ -1,15 +1,3 @@
-.topbar {
-    height: 43px;
-    top: 0;
-    position: fixed;
-    z-index: 200;
-    width: 100%;
-    border-bottom: solid 1px #ca2100;
-    background-color: #db4c3f;
-    transition: height 200ms ease-in;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-}
-
 .icons {
     background: url(https://d3ptyyxy2at9ui.cloudfront.net/c72359729b11e0d9edb7517d477ed05c.png) 0 0 no-repeat;
 }
@@ -18,19 +6,6 @@
     .icons {
         background: url(https://d3ptyyxy2at9ui.cloudfront.net/a1d7a51ec4a3dc5aa8e64d8f6e8b3331.png) 0 0 no-repeat;
     }
-}
-
-.topBarInner {
-    composes: maxWidth from 'styles/variables.css';
-    height: 100%;
-    margin: 0 auto;
-    position: relative;
-}
-
-.leftMenuToggle {
-    padding: 5px 0;
-    padding-right: 5px;
-    display: none;
 }
 
 .iconLightMenuToggle {
